@@ -8,48 +8,146 @@
    footer {
     width: 100%;
     height: auto;
-    background-color: #172946;
+    background-color: #172946d9;
     color: white;
    }
    
-   h1,
-   h2 {
-    text-align: center;
-    text-shadow: 4px 4px 5px #9f9595;
-    padding-block: 1%;
+   header {
+    padding-bottom: 1%;
    }
    
-   h1 {
+   h1, p:not(.note) {
+    font-family: "Vibur";
+    font-weight: 400;
+    font-size:2.4em;
+    text-align: center;
+    color: white;
+    padding-block: 1%;
     height: auto;
     width: auto;
+    animation: flicker 1.5s infinite alternate;
+   }
+   
+   @keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #d67d62,
+        0 0 80px #d67d62,
+        0 0 90px #d67d62,
+        0 0 100px #d67d62,
+        0 0 150px #d67d62;
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+  
+
+   h2 {
+    font-size:1.7em;
+    text-align: center;
+    color: white;
+    text-shadow:
+      0 0 2px #fff,
+      0 0 8px #fff,
+      0 0 16px #fff,
+      0 0 36px #d67d62,
+      0 0 71px #d67d62,
+      0 0 78px #d67d62,
+      0 0 92px #d67d62,
+      0 0 138px #d67d62;
+    padding-block: 1%;
+    font-weight: 550;
+   }
+   
+   h2:not(.ctrl) {
+    font-family: "Vibur";
    }
 
-   img {
+   .ctrl {
+    font-weight: lighter;
+   }
+
+   img:not(.cat) {
     display: block;
     height: 108px;
-    width: 108px;
+    width: 193px;
     margin-left: auto;
     margin-right: auto;
    }
+
+   .cat {
+    display: block;
+    object-fit: cover;
+    height: 70px;
+    width: 80px;
+    object-position: -1px 0px;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 1ch;
+   }
    
-   ul {
+   ul, ol {
     padding-top: 1%;
     padding-bottom: 1%;    
     padding-left: 40px;
     font-size: 20px;
    }
    
-   p {
-    padding-block: 2%;
+   p:not(.note) {
+    padding-block: 1%;
     text-align: center;
-    font-size: 30px;
+    font-size: 2em;
+   }
+
+   .note {
+    font-size: .9em;
+    padding-left: 2%;
    }
 
    .card {
     width: 80%;
     margin: 40px auto;
-    border: 5px solid rgb(196, 125, 3);
-    box-shadow: 5px 10px #949494;
+    border: 5px solid rgba(196, 125, 3, 0.9);
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.7), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    background-color: rgba(0,0,0, 0.6);
+    color: white;
+    border-radius: 3ch;
+    padding: 20px;
    }
 
+   h3 {
+    padding-top: 1%;
+    padding-left: 2%;
+    font-size: 20px;
+    font-weight: 550;
+   }
+   
+   code {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    font-family: courier, monospace;
+    padding: 0 3px;
+    color: #d67d62;
+    font-weight: 550;
+   }
 
+   body  {
+    background-image: url("lofi_5.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+
+   a {
+    color: #d67d62;
+   }
+
+   
