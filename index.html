@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
+  <link href='https://fonts.googleapis.com/css?family=Vibur:400' rel='stylesheet' type='text/css'>
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,57 +10,170 @@
     <link rel="stylesheet" href="./assets/style.css">
     <title>Prework Study Guide</title>
   </head>
-  <body>
+  
+  <body> 
+
     <header id="top">
       <h1>Prework Study Guide</h1>
-      <img src="./assets/bowtie-cat.png" alt="Profile image of cat wearing a bow tie." />
-      <h2>✨ Open the Console (Ctrl+Shift+I) to See What's Happening ✨</h2>
+      <img class="cat" src="./assets/bowtie-cat.png" alt="Image of cat wearing a bowtie">
+      <h2 class="ctrl">✨ Open the Console (Ctrl+Shift+I) to See What's Happening ✨</h2>
     </header>
+    
     <main>
       <section class="card" id="html-section">
         <h2>HTML</h2>
+        <h3>Let's build a house! 🛠</h3>
         <ul>
-          <li>The head element contains information about the webpage.</li>
-          <li>The body element represents the visible content shown to the user.</li>
-          <li>< ul > is used for unordered lists</li>
-          <li>< ol > is used for ordered lists (i.e. 1., 2., 3.)</ol></li>
-          <li>< h# > is used for headers with # denoting numbers 1-6</h></li>
+          <li>The <code>&lt;html&gt;</code> represents the root (top-level element) of an HTML document, so it is also referred to as the root element. All other elements must be descendants of this element.</li>
+          <li>The <code>&lt;head&gt;</code> element contains information about the webpage.</li>
+            <ul>
+              <li>The <code>&lt;meta&gt;</code> element represents metadata that cannot be represented by other HTML meta-related elements, like <code>&lt;base&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code>, <code>&lt;style&gt;</code> or <code>&lt;title&gt;</code>.</li>
+              <li>The <code>&lt;link&gt;</code> element specifies relationships between the current document and an external resource. This element is most commonly used to link to stylesheets.</li>
+              <li>The <code>&lt;title&gt;</code> element defines the document's title that is shown in a browser's title bar or a page's tab.</li>
+            </ul>
+          <li>The <code>&lt;body&gt;</code> element represents the visible content shown to the user.</li>
+            <ul>
+              <li>The <code>&lt;header></code> element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements.</li>
+              <li>The <code>&lt;main></code> element represents the dominant content of the <body> of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the central functionality of an application.</li>
+                <ul>
+                  <li>The <code>&lt;section></code> element represents a generic standalone section of a document, which doesn't have a more specific semantic element to represent it.</li>
+                  <li>The <code>&lt;h1></code> to <code>&lt;h6></code> elements represent six levels of section headings. <code>&lt;h1></code> is the highest section level and <code>&lt;h6></code> is the lowest.</li>
+                  <li>The <code>&lt;img></code> element embeds an image into the document.</li>
+                    <ul>
+                      <li><code>class</code> can be used to define an alternate class for that particular element.</li>
+                      <li><code>src</code> specifies the path or URL to the image.</li>
+                      <li><code>alt</code> attribute specifies an alternate text for an image, if the image cannot be displayed.</li>
+                    </ul>
+                  <li>The <code>&lt;ul></code> element represents an unordered list of items, typically rendered as a bulleted list.</li>
+                  <li>The <code>&lt;ol></code> element represents an ordered list of items — typically rendered as a numbered list.</li>
+                  <li>The <code>&lt;li></code> element is used to represent an item in a list.</li>
+                  <li>The <code>&lt;p></code> element represents a paragraph. Paragraphs are usually represented in visual media as blocks of text separated from adjacent blocks by blank lines and/or first-line indentation.</li>
+                  <li>The <code>&lt;a></code> element (or anchor element), with its <code>href</code> attribute, creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.</li>
+                   <ul>
+                    <li><code>href</code> includes the URL that the hyperlink points to.</li>
+                   </ul>
+                </ul>
+              <li>The <code>&lt;code></code> element displays its contents styled in a fashion intended to indicate that the text is a short fragment of computer code.</li>
+            </ul>
+          <li><code>&lt;!-- *insert comment* --&gt;</code> can be be used to add in code comments.</li>
+          <li>Check out <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">this site</a> for more info on HTML.</li>
         </ul>
       </section>
 
       <section class="card" id="css-section">
         <h2>CSS</h2>
+        <h3>Let's paint the house!🏡</h3>
         <ul>
-          <li>A margin indicates how much space we want around the outside of an element.</li>
-          <li>A padding indicates how much space we want around the content inside an element.</li>
+          <li><code>margin</code> indicates how much space we want around the outside of an element (i.e. outside of the border).</li>
+          <li><code>padding</code> indicates how much space we want around the content inside an element (i.e. inside of the border).</li>
+        </ul>
+          
+        <p class="note"><b>NOTE:</b> <code>margin-*</code> and <code>padding-*</code> have additions that allow for more tuned applications (e.g. <code>-top</code>, <code>-left</code>, <code>-bottom</code>, <code>-right</code>, <code>-block</code>).</p>
+        
+        <ul>
+          <li><code>:not()</code> can be used to apply a style to all elements except for what's in the parenthesis.</li>
+          <li><code>width</code> defines the width of the element. At 100% it spans the whole webpage.</li>
+          <li><code>height</code> defines the height of the element. Using <code>auto</code> allows the height to automatically scale according to the width and the amount of HTML content.</li>
+          <li><code>background</code> sets all background style properties at once, such as color, image, origin and size, or repeat method.</li>
+            <ul>
+              <li><code>background-color</code> sets the background color of an element.</li>
+              <li><code>background-image</code> sets one or more background images on an element.</li>
+              <li><code>background-position</code> sets the initial position for each background image.</li>
+              <li><code>background-repeat</code> sets how background images are repeated. A background image can be repeated along the horizontal and vertical axes, or not repeated at all.</li>
+              <li><code>background-size</code> sets the size of the element's background image.</li>
+            </ul>
+          <li><code>color</code> sets the foreground color value of an element's text and text decorations.</li>
+          <li><code>font</code> sets all the different properties of an element's font. This can be modified to address particular traits:</li>
+            <ul>
+              <li><code>font-family</code>specifies a prioritized list of one or more font family names and/or generic family names for the selected element. By providing a list of fonts, this provides a backup font in the case that any preceding fonts are not available through the user's browser.</li>
+              <li><code>font-size</code> sets the size of the font.</li>
+              <li><code>font-style</code> sets whether a font should be styled with a normal, italic, or oblique face.</li>
+              <li><code>font-weight</code> sets the weight (or boldness) of the font.</li>
+            </ul>
+          <li><code>text-align</code> sets the horizontal alignment of the inline-level content inside a block element or table-cell box.</li>
+          <li><code>text-shadow</code>adds shadows to text. It accepts a comma-separated list of shadows to be applied to the text and any of its <code>decorations</code>. Each shadow is described by some combination of X and Y offsets from the element, blur radius, and color.</li>
+          <li><code>animation</code> applies an animation between styles, see <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation">more here</a>. <a href="https://css-tricks.com/how-to-create-neon-text-with-css/">This</a> is how it was applied on this site.</li>
+          <li><code>display</code> sets whether an element is treated as a block or inline element and the layout used for its children, such as flow layout, grid or flex</li>
+          <li><code>object-fit</code> sets how the content of a replaced element, such as an <code>&lt;img&gt;</code> or <code>&lt;video&gt;</code>, should be resized to fit its container.</li>
+          <li><code>object-position</code> specifies the alignment of the selected replaced element's contents within the element's box.</li>
+          <li><code>overflow</code> sets the desired behavior for an element's overflow — i.e. when an element's content is too big to fit in its block formatting context — in both directions.</li>
+          <li><code>border</code>sets an element's border. It sets the values of <code>border-width</code>, <code>border-style</code>, and <code>border-color</code>.</li>
+            <ul>
+              <li><code>border-radius</code> rounds the corners of an element's outer border edge. You can set a single radius to make circular corners, or two radii to make elliptical corners.</li>
+            </ul>
+          <li>Check out <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">this site</a> for more info on CSS.</li>
         </ul>
       </section>
    
       <section class="card" id="git-section">
         <h2>Git</h2>
-        <ul>
-          <li>git status: checks what branch we are currently on</li>
-          <li>git checkout -b branch-name: creates a new branch and switches to it</li>
-        </ul>
+        <h3>Let's see how to get started on our local repository: 💻</h3>
+        <ol>
+          <li>Navigate to your folder with:</li> <code>cd Bootcamp/prework-study-guide/</code>
+          <li>Check what branch you are currently on by running <code>git status</code></li>
+          <li>If you are not on the <code>main</code> branch, run <code>git checkout main</code> to switch to the <code>main</code> branch</li>
+          <li>Pull the remote <code>main</code> branch into the local <code>main</code> branch by running <code>git pull origin main</code>. Now your local and remote <code>main</code> branches are in sync!</li>
+          <li>Create a new feature branch for the JavaScript file by entering the following into the command line:</li> <code>git checkout -b feature/add-changes</code> 
+          <li>Navigate to your desired folder in the project repo by using the <code>cd</code> command in the command line.</li>
+          <li>You can create a new file inside your folder bu using the <code>touch</code> command in the command line. For example, use <code>touch myfile.html</code> (<b>Note:</b> instead of .html, you can also use .css, .js, .md, etc.)</li>
+          <li>You can open VSCode with <code>code .</code> or open the specific file with <code>start myfile.html</code> (for Windows) or <code>open myfile.html</code> (for Mac).</li>
+        </ol>
+        
+        <h3>Once we've made our edits, how do we merge our local into our remote repository? 🐱‍💻</h3>
+        <ol>
+          <li>In the terminal, navigate to the <code>prework-study-guide</code> directory. Use the following command to stage your changes:</li>
+          <code>git add -A</code>
+          <li>Next, commit your changes with a message that describes your changes:</li>
+          <code>git commit -m “&lt;your message here&gt;”</code>
+          <li>Once the changes are added and committed locally, make sure the local branch is up to date before pushing up the changes. Pull in the base branch <code>main</code> to your feature branch <code>feature/add-changes</code> by running the following Git command:</li>
+          <code>git pull origin main</code>
+          <li>To complete the Git flow, use <code>git push</code> to push up your changes to the remote repository by running the following Git command:</li>
+          <code>git push origin feature/add-changes</code>
+        </ol>
+
+        <h3>Now that the changes have been committed to the remote repository, we can merge the branch in GitHub. 👩‍💻</h3>
+        <ol start="5">
+          <li>Navigate to the <code>prework-study-guide</code> repository in GitHub. Change the branch to the <code>feature/add-changes</code> branch and refresh the page to confirm that the changes we pushed up are now in the feature branch in GitHub.</li>
+          <li>Navigate to the "Pull Requests" tab and open a new pull request. Make sure that you select <code>main</code> as the base branch and <code>feature/add-changes</code> as the comparison branch. Click "Create pull request" to open a PR.</li>
+          <li>Once on the pull request form, give your PR a title and a short description of the changes. Click the "Merge pull request" button to merge your work into the <code>main</code> branch.</li>
+          <li>If this branch applied to an issue, we can go ahead and close the associated GitHub issue. Navigate to the "Issues" tab and select the related issue. Go ahead and close that issue.</li>
+        </ol>
+       
+        <h3>Next 👍</h3>
+        <ol start="9">
+          <li>Use <code>git checkout main</code> to switch to the <code>main</code> branch, and <code>git pull origin main</code> to pull in the latest changes.</li>
+          <li>Use <code>git status</code> to ensure that all your changes have been made</li>
+          <li>Once in sync, you can use the following to delete your local branch:</li> <code>git branch -d feature/add-changes</code>
+        </ol>
       </section>
    
       <section class="card" id="javascript-section">
         <h2>JavaScript</h2>
+        <h3>Lets add our home ammenities! 💡</h3>
         <ul>
           <li>A variable is a named container that allows us to store data in our code.</li>
-          <li>Control flow is the order in which a computer executes code in a script.</li>        </ul>
-      </section>
-
-      <section class="card" id="definitions-section">
-        <h2>Definitions</h2>
-        <ul>
-          <li>Enter your definitions here</li>
+          <li>Control flow is the order in which a computer executes code in a script.</li>   
+          <li>Check out <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">this site</a> for more info on JavaScript.</li>  
         </ul>
       </section>
-    </main>
 
+      <section class="card" id="credits-section">
+        <h2>Credits</h2>
+        <ul>
+          <li>Background: "Corporations" by Kenze Wee Hon Ming, digital, 2018</li>
+          <li>Notes: <i>MDN Web Docs.</i> <a href="https://developer.mozilla.org/en-US/">https://developer.mozilla.org/en-US/</a>.</li>
+          <li>Notes: <i>W3Schools Free Online Web Tutorials.</i> <a href="https://www.w3schools.com/">https://www.w3schools.com/</a>.</li>
+        </ul>
+      </section>
+
+    </main>
+      
     <footer>
       <p>I can kinda code!</p>
+      <!--
+      <img src="./assets/koro-sensei.gif" alt="Gif of Korosensei." />
+      <p>（。＾▽＾）</p>
+      -->
     </footer>
     <script src="./assets/script.js"></script>
   </body>
